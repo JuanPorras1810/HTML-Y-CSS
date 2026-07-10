@@ -1,2 +1,2 @@
-# HTML-Y-CSS
+# HTML-CSS-Y-JAVASCRIPT
 Proyectos de practica 
