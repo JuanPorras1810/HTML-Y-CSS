@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios: Bucles For en JavaScript ES6</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/bucles.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Ejercicios: Bucles For en JavaScript ES6</h1>
+        <div class="autor">Aprendiz: <span>Juan Sebastian Porras Merchan</span></div>
+    </header>
+
+    <main>
+
+        <!-- Ejercicio 1 -->
+        <div class="card">
+            <div class="card-header" onclick="toggleCard(this)">
+                <h2>Ejercicio 1: Lista de 0 al valor tecleado</h2>
+                <span class="icon">+</span>
+            </div>
+            <div class="card-content">
+                <div class="descripcion">
+                    Usando un bucle for, escribir un script que pida un valor entero y muestre en pantalla una lista de números desde el 0 al valor tecleado. Los números se separarán por comas.
+                </div>
+                <div class="interaccion-zona">
+                    <div class="controles">
+                        <button class="btn-ejecutar" onclick="lanzarEjercicio(listNum, 'res-1')">Ejecutar Script</button>
+                    </div>
+                    <div class="respuesta-titulo">Consola de salida:</div>
+                    <div class="respuesta-caja" id="res-1">El resultado aparecerá aquí...</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ejercicio 2 -->
+        <div class="card">
+            <div class="card-header" onclick="toggleCard(this)">
+                <h2>Ejercicio 2: Cuenta atrás</h2>
+                <span class="icon">+</span>
+            </div>
+            <div class="card-content">
+                <div class="descripcion">
+                    Dado un número entero, el script debe mostrar una cuenta atrás, es decir, una lista de números separados por comas desde el número tecleado hasta el 0.
+                </div>
+                <div class="interaccion-zona">
+                    <div class="controles">
+                        <button class="btn-ejecutar" onclick="lanzarEjercicio(listNumDes, 'res-2')">Ejecutar Script</button>
+                    </div>
+                    <div class="respuesta-titulo">Consola de salida:</div>
+                    <div class="respuesta-caja" id="res-2">El resultado aparecerá aquí...</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ejercicio 3 -->
+        <div class="card">
+            <div class="card-header" onclick="toggleCard(this)">
+                <h2>Ejercicio 3: Números pares</h2>
+                <span class="icon">+</span>
+            </div>
+            <div class="card-content">
+                <div class="descripcion">
+                    Se quiere un bucle que genere una lista con todos los números pares positivos por debajo del número tecleado por el usuario. Los números aparecerán en una ventana alert con cambios de línea.
+                </div>
+                <div class="interaccion-zona">
+                    <div class="controles">
+                        <button class="btn-ejecutar" onclick="lanzarEjercicio(numPar, 'res-3')">Ejecutar Script</button>
+                    </div>
+                    <div class="respuesta-titulo">Consola de salida:</div>
+                    <div class="respuesta-caja" id="res-3">El resultado aparecerá aquí...</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ejercicio 4 -->
+        <div class="card">
+            <div class="card-header" onclick="toggleCard(this)">
+                <h2>Ejercicio 4: Tabla de multiplicar</h2>
+                <span class="icon">+</span>
+            </div>
+            <div class="card-content">
+                <div class="descripcion">
+                    Este script debe escribir la tabla de multiplicar del número que el usuario teclee. La tabla mostrará en diferentes líneas cada producto y el resultado en la forma a x b = ab.
+                </div>
+                <div class="interaccion-zona">
+                    <div class="controles">
+                        <button class="btn-ejecutar" onclick="lanzarEjercicio(tabMul, 'res-4')">Ejecutar Script</button>
+                    </div>
+                    <div class="respuesta-titulo">Consola de salida:</div>
+                    <div class="respuesta-caja" id="res-4">El resultado aparecerá aquí...</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ejercicio 5 -->
+        <div class="card">
+            <div class="card-header" onclick="toggleCard(this)">
+                <h2>Ejercicio 5: Divisibles con resto 2</h2>
+                <span class="icon">+</span>
+            </div>
+            <div class="card-content">
+                <div class="descripcion">
+                    El usuario escribe un número y el script imprimirá (console.log) todos los números menores que al dividirlos por 3 den como resto 2.
+                </div>
+                <div class="interaccion-zona">
+                    <div class="controles">
+                        <button class="btn-ejecutar" onclick="lanzarEjercicio(divRes, 'res-5')">Ejecutar Script</button>
+                    </div>
+                    <div class="respuesta-titulo">Consola de salida:</div>
+                    <div class="respuesta-caja" id="res-5">El resultado aparecerá aquí...</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ejercicio 6 -->
+        <div class="card">
+            <div class="card-header" onclick="toggleCard(this)">
+                <h2>Ejercicio 6: Repetir una letra</h2>
+                <span class="icon">+</span>
+            </div>
+            <div class="card-content">
+                <div class="descripcion">
+                    El usuario deberá teclear una letra y un número, y el programa mostrará una cadena formada por la letra repetida el número que haya tecleado.
+                </div>
+                <div class="interaccion-zona">
+                    <div class="controles">
+                        <button class="btn-ejecutar" onclick="lanzarEjercicio(repLet, 'res-6')">Ejecutar Script</button>
+                    </div>
+                    <div class="respuesta-titulo">Consola de salida:</div>
+                    <div class="respuesta-caja" id="res-6">PEl resultado aparecerá aquí...</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ejercicio 7 -->
+        <div class="card">
+            <div class="card-header" onclick="toggleCard(this)">
+                <h2>Ejercicio 7: Contador en base 5</h2>
+                <span class="icon">+</span>
+            </div>
+            <div class="card-content">
+                <div class="descripcion">
+                    Contador de dos dígitos en base 5. El dígito de la derecha irá aumentando y cuando pase de 4, su valor se pondrá a 0 y el dígito de la izquierda se incrementa en 1. Se detiene en 1:4.
+                </div>
+                <div class="interaccion-zona">
+                    <div class="controles">
+                        <button class="btn-ejecutar" onclick="lanzarEjercicio(contBase, 'res-7')">Ejecutar Script</button>
+                    </div>
+                    <div class="respuesta-titulo">Consola de salida:</div>
+                    <div class="respuesta-caja" id="res-7">El resultado aparecerá aquí...</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ejercicio 8 -->
+        <div class="card">
+            <div class="card-header" onclick="toggleCard(this)">
+                <h2>Ejercicio 8: Triángulo de asteriscos</h2>
+                <span class="icon">+</span>
+            </div>
+            <div class="card-content">
+                <div class="descripcion">
+                    Se trata de dibujar un triángulo rectángulo con asteriscos. El usuario tecleará un valor entero, el programa escribirá con asteriscos tantas líneas como diga ese número.
+                </div>
+                <div class="interaccion-zona">
+                    <div class="controles">
+                        <button class="btn-ejecutar" onclick="lanzarEjercicio(triAst, 'res-8')">Ejecutar Script</button>
+                    </div>
+                    <div class="respuesta-titulo">Consola de salida:</div>
+                    <div class="respuesta-caja" id="res-8">El resultado aparecerá aquí...</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ejercicio 9 -->
+        <div class="card">
+            <div class="card-header" onclick="toggleCard(this)">
+                <h2>Ejercicio 9: Suma de enteros positivos</h2>
+                <span class="icon">+</span>
+            </div>
+            <div class="card-content">
+                <div class="descripcion">
+                    Crear una aplicación que calcule la suma de todos los números enteros positivos entre 0 y el número tecleado por el usuario.
+                </div>
+                <div class="interaccion-zona">
+                    <div class="controles">
+                        <button class="btn-ejecutar" onclick="lanzarEjercicio(sumEnt, 'res-9')">Ejecutar Script</button>
+                    </div>
+                    <div class="respuesta-titulo">Consola de salida:</div>
+                    <div class="respuesta-caja" id="res-9">El resultado aparecerá aquí...</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ejercicio 10 -->
+        <div class="card">
+            <div class="card-header" onclick="toggleCard(this)">
+                <h2>Ejercicio 10: Media aritmética de 4 números</h2>
+                <span class="icon">+</span>
+            </div>
+            <div class="card-content">
+                <div class="descripcion">
+                    Programar un script que pida al usuario que teclee 4 números (uno cada vez) y calcule la media aritmética de estos.
+                </div>
+                <div class="interaccion-zona">
+                    <div class="controles">
+                        <button class="btn-ejecutar" onclick="lanzarEjercicio(medAri, 'res-10')">Ejecutar Script</button>
+                    </div>
+                    <div class="respuesta-titulo">Consola de salida:</div>
+                    <div class="respuesta-caja" id="res-10">El resultado aparecerá aquí...</div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+</body>
+</html>
