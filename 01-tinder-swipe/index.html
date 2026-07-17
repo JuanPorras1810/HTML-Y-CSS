@@ -1,0 +1,106 @@
+<!--
+  Proyecto: 100 proyectos JS · 01 - Tinder Swipe
+  Autor: Carlos Chaparro
+  Descripción:
+  Este proyecto simula la funcionalidad de "Swipe" de Tinder, permitiendo arrastrar tarjetas de usuarios hacia la izquierda o derecha para rechazar o aceptar. 
+  Adicionalmente, utiliza botones personalizados con distintas acciones que muestran mensajes en la consola cuando se hacen clic en ellos.
+  Todos los comentarios y documentación están en español.
+-->
+
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta name="Author" content="Carlos Chaparro">
+  <meta name="keywords" content="Adso, js, Modal">
+  <title>Tinder con variables</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/tinder.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+  <title>100 proyectos JS · 01 - Tinder Swipe</title>
+  <div class="shadow">
+    <main>
+      <section>
+        <div class="center-feedback">
+          <div id="feedback-nope" class="feedback-icon">✖</div>
+          <div id="feedback-like" class="feedback-icon">❤</div>
+
+        </div>
+        <div id="feedback-super" class="super-heart">❤</div>
+
+
+        <div class="white-bkg"></div>
+        <header>
+          <img src="photos/tinder-logo.webp" alt="Tinder Logo" />
+        </header>
+
+        <div class="cards">
+
+
+          <article>
+            <img src="photos/6.jpg" alt="Cristiano Ronaldo" />
+            <h2>Cristiano <span>40</span></h2>
+            <div class="choice nope">NOPE</div>
+            <div class="choice like">LIKE</div>
+          </article>
+
+          <article>
+            <img src="photos/5.jpg" alt="Shakira, cantante colombiana" />
+            <h2>Shakira <span>49</span></h2>
+            <div class="choice nope">NOPE</div>
+            <div class="choice like">LIKE</div>
+          </article>
+
+          <article>
+            <img src="photos/4.jpg" alt="James Rodríguez, futbolista colombiano" />
+            <h2>James <span>34</span></h2>
+            <div class="choice nope">NOPE</div>
+            <div class="choice like">LIKE</div>
+          </article>
+
+          <article>
+            <img src="photos/3.webp" alt="Karol G, cantante colombiana" />
+            <h2>Karol G <span>35</span></h2>
+            <div class="choice nope">NOPE</div>
+            <div class="choice like">LIKE</div>
+          </article>
+
+          <article>
+            <img src="photos/2.webp" alt="Álex, brown hair man, 25 years old" />
+            <h2>Álex <span>25</span></h2>
+            <div class="choice nope">NOPE</div>
+            <div class="choice like">LIKE</div>
+          </article>
+
+          <article>
+            <img src="photos/1.webp" alt="Leila, redhead, 25 years old" />
+            <h2>Leila <span>27</span></h2>
+            <div class="choice nope">NOPE</div>
+            <div class="choice like">LIKE</div>
+          </article>
+
+          <span>
+            No hay más personas cerca de ti...<br />
+            Vuelve a intentarlo más tarde
+          </span>
+        </div>
+
+        <footer>
+          <!-- Botones para distintas acciones de la app -->
+          <button class="is-undo" aria-label="undo"></button>
+          <button class="is-remove is-big" aria-label="remove"></button>
+          <button class="is-star" aria-label="star"></button>
+          <button class="is-fav is-big" aria-label="fav"></button>
+          <button class="is-zap" aria-label="zap"></button>
+        </footer>
+      </section>
+    </main>
+  </div>
+</body>
+
+</html>

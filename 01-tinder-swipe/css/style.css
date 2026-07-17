@@ -1,0 +1,331 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+    user-select: none;
+    background: #e5e5e5;
+}
+
+.white-bkg {
+    position: absolute;
+    background: #f6f6f6;
+    inset: 0;
+    z-index: -10;
+}
+
+.shadow {
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.3));
+}
+
+main {
+    background: url('../photos/iphone.webp') no-repeat;
+    background-size: contain;
+    width: 320px;
+    height: 640px;
+    display: flex;
+    position: relative;
+}
+
+section {
+    width: 100%;
+    border-radius: 32px;
+    display: flex;
+    gap: 24px;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    padding: 16px 6px;
+    margin: 24px;
+}
+
+header {
+    display: flex;
+    justify-content: start;
+    padding-left: 1rem;
+}
+
+header img {
+    width: 24px;
+    height: 24px;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    padding: 0 24px;
+    justify-content: center;
+    align-items: center;
+}
+
+footer button {
+    background: url('../photos/tinder-icons.webp') no-repeat;
+    background-position: 0px 0px;
+    background-size: 175px;
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    border: 0;
+    cursor: pointer;
+    transition: scale .3s ease;
+}
+
+footer button:hover {
+    scale: 1.4;
+}
+
+footer button.is-big {
+    background-size: 250px;
+    width: 48px;
+    height: 48px;
+}
+
+footer button.is-undo {
+    background-position: -140px 0;
+}
+
+footer button.is-remove {
+    background-position: -150px 0;
+}
+
+footer button.is-fav {
+    background-position: -50px 0;
+}
+
+footer button.is-star {
+    background-position: -70px 0px;
+}
+
+.cards {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.cards>span {
+    display: grid;
+    place-content: center;
+    color: #777;
+    font-size: 14px;
+    text-align: center;
+    height: 100%;
+    z-index: -1;
+}
+
+.cards article {
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+    cursor: grab;
+    overflow: hidden;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    transition: transform .3s ease;
+}
+
+.cards article.go-left {
+    transform: translateX(-150%) rotate(-30deg) !important;
+    transition: transform .3s ease, rotate .3s ease;
+}
+
+.cards article.go-right {
+    transform: translateX(150%) rotate(30deg) !important;
+    transition: transform .3s ease, rotate .3s ease;
+}
+
+.cards article.reset {
+    transition: transform .3s ease;
+    transform: translateX(0) !important;
+}
+
+.cards article .choice {
+    border-radius: 8px;
+    color: black;
+    border: 4px solid;
+    z-index: 9999;
+    position: absolute;
+    top: 32px;
+    right: 16px;
+    opacity: 0;
+    padding: 4px 8px;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(0, 0, 0, .3);
+    width: fit-content;
+}
+
+.cards article .choice.nope {
+    border-color: #ff6e63;
+    color: #ff6e63;
+    transform: rotate(30deg);
+}
+
+.cards article .choice.like {
+    border-color: #63ff68;
+    color: #63ff68;
+    left: 16px;
+    transform: rotate(-30deg);
+}
+
+.cards article img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cards article h2 {
+    color: white;
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: last baseline;
+    height: 100%;
+    width: 100%;
+    padding: 16px;
+    z-index: 3;
+    background: linear-gradient(to top, #00000088 20%, transparent 40%);
+}
+
+.cards article span {
+    margin-left: 6px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+
+
+
+
+
+/* Juan Porras*/
+
+.center-feedback {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    pointer-events: none;
+    display: block;
+    text-align: center;
+}
+
+.feedback-icon {
+    font-size: 80px;
+    opacity: 0;
+    transform: scale(0.5);
+    display: none;
+}
+
+
+.feedback-icon.show-nope {
+    display: block;
+    color: #ff4f4f;
+    text-shadow: 0 0 20px rgba(255, 79, 79, 0.6);
+    animation: popAndFadeOut 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+
+.feedback-icon.show-like {
+    display: block;
+    color: #ff2a74;
+    text-shadow: 0 0 20px rgba(255, 42, 116, 0.6);
+    animation: heartBeatAndFade 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.super-heart {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-content: center;
+    font-size: min(100vw, 280px);
+    color: #ff4458;
+    opacity: 0;
+    z-index: 200;
+    pointer-events: none;
+    line-height: 1;
+    text-shadow: 0 0 30px rgba(255, 68, 88, 0.7);
+}
+
+.super-heart.show-super {
+    animation: super-heart-pop 0.9s ease forwards;
+}
+
+@keyframes super-heart-pop {
+    0% {
+        opacity: 0;
+        transform: scale(0.2);
+    }
+
+    35% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+
+    65% {
+        opacity: 0.95;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1.15);
+    }
+}
+
+/* Keyframes: Efecto Pop y Desvanecido para la X */
+@keyframes popAndFadeOut {
+    0% {
+        opacity: 0;
+        transform: scale(0.3) rotate(-15deg);
+    }
+
+    30% {
+        opacity: 1;
+        transform: scale(1.2) rotate(10deg);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+/* Keyframes: Latido y Desvanecido para el Corazón */
+@keyframes heartBeatAndFade {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+
+    25% {
+        opacity: 1;
+        transform: scale(1.3);
+    }
+
+    45% {
+        transform: scale(1);
+    }
+
+    60% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+}
